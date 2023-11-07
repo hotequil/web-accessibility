@@ -178,6 +178,25 @@ export const Page: React.FC<{ wrongChildren: ReactNode; rightChildren: ReactNode
         },
     ]
 
+    const socialMedias = [
+        {
+            text: "Hotequil's website",
+            href: 'https://hotequil.tech',
+        },
+        {
+            text: "Hotequil's LinkedIn",
+            href: 'https://www.linkedin.com/in/joao-paulo-hotequil',
+        },
+        {
+            text: "Hotequil's GitHub",
+            href: 'https://github.com/hotequil',
+        },
+        {
+            text: "Hotequil's Odysee",
+            href: 'https://odysee.com/@hotequil',
+        },
+    ]
+
     return (
         <>
             <StyledHeader>
@@ -209,20 +228,11 @@ export const Page: React.FC<{ wrongChildren: ReactNode; rightChildren: ReactNode
                     </StyledFooterTitle>
                     <p>Made by João Paulo Hotequil.</p>
                     <StyledFooterLinks>
-                        <li>
-                            <ExternalLink to={'https://hotequil.tech'}>Hotequil's website</ExternalLink>
-                        </li>
-                        <li>
-                            <ExternalLink to={'https://www.linkedin.com/in/joao-paulo-hotequil'}>
-                                Hotequil's LinkedIn
-                            </ExternalLink>
-                        </li>
-                        <li>
-                            <ExternalLink to={'https://github.com/hotequil'}>Hotequil's GitHub</ExternalLink>
-                        </li>
-                        <li>
-                            <ExternalLink to={'https://odysee.com/@hotequil'}>Hotequil's Odysee</ExternalLink>
-                        </li>
+                        {socialMedias.map(({ text, href }, index) => (
+                            <li key={index}>
+                                <ExternalLink to={href}>{text}</ExternalLink>
+                            </li>
+                        ))}
                     </StyledFooterLinks>
                 </StyledFooterContent>
             </StyledFooter>
