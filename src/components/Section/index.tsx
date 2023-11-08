@@ -50,7 +50,7 @@ export const Section: React.FC<PropsWithChildren<{ type: SectionType }>> = ({ ty
 
     return (
         <StyledSection type={type}>
-            <StyledTitle type={type}>{title}</StyledTitle>
+            <StyledTitle type={type}>{`${title} examples:`}</StyledTitle>
             {children}
         </StyledSection>
     )

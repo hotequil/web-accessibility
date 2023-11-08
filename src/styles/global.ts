@@ -27,4 +27,8 @@ export default createGlobalStyle`
             box-shadow: inset 0 0 0 ${({ theme }) => theme.spaces.two} ${({ theme }) => theme.colors.blue};
         }
     }
+
+    abbr{
+        text-decoration: none;
+    }
 `
