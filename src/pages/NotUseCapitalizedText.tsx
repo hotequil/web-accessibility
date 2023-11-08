@@ -6,7 +6,7 @@ import { darken, lighten } from 'polished'
 const textStyles = css`
     color: ${({ theme }) => darken(0.01, theme.colors.blue)};
     font-weight: 700;
-    font-size: 40px;
+    font-size: 32px;
     text-shadow: ${({ theme }) => `${theme.spaces.one} ${theme.spaces.two} ${theme.spaces.two}`}
         ${({ theme }) => lighten(0.6, theme.colors.black)};
 `
