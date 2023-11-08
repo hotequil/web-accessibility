@@ -10,6 +10,6 @@
         [headers.values]
             Cache-Control = "max-age=31536000"
             X-Content-Type-Options = "DENY"
-            Content-Security-Policy = "default-src 'self' 'unsafe-inline' *.cloudfront.net; style-src 'unsafe-inline'; style-src-elem 'unsafe-inline' *.cloudfront.net web-accessibility-hotequil.netlify.app; font-src fonts.gstatic.com"
+            Content-Security-Policy = "default-src 'self' 'unsafe-inline' *.cloudfront.net; style-src 'unsafe-inline'; style-src-elem 'unsafe-inline' *.cloudfront.net web-accessibility-hotequil.netlify.app fonts.googleapis.com cdnjs.cloudflare.com; font-src fonts.gstatic.com"
             X-Frame-Options = "SAMEORIGIN"
             X-XSS-Protection = "1; mode=block"
