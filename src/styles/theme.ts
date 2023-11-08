@@ -15,6 +15,7 @@ export default {
     spaces: {
         one,
         two,
+        three: '6px',
         four: '8px',
         six,
         eight: '16px',

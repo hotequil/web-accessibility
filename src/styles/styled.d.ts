@@ -12,6 +12,7 @@ declare module 'styled-components' {
         spaces: {
             one: string
             two: string
+            three: string
             four: string
             six: string
             eight: string

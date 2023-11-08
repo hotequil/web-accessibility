@@ -4,6 +4,7 @@ import GlobalStyles from './styles/global'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import routes from './routes'
 import { NotUseCapitalizedText } from './pages/NotUseCapitalizedText'
+import { ImageWithAlternativeText } from './pages/ImageWithAlternativeText'
 
 export default function App() {
     return (
@@ -12,6 +13,7 @@ export default function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path={routes.notUseCapitalizedText} element={<NotUseCapitalizedText />} />
+                    <Route path={routes.imageWithAlternativeText} element={<ImageWithAlternativeText />} />
                     <Route path="*" element={<Navigate to={routes.notUseCapitalizedText} replace />} />
                 </Routes>
             </BrowserRouter>
