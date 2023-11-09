@@ -23,11 +23,12 @@ const StyledTitle = styled.h2<{ type: SectionType }>`
 const StyledSection = styled.section<{ type: SectionType }>`
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    width: 50%;
     row-gap: ${({ theme }) => theme.spaces.sixteen};
     padding: ${({ theme }) => theme.spaces.sixteen};
+    box-sizing: border-box;
     background-color: ${({ type, theme }) => {
-        const opacity = 0.92
+        const opacity = 0.94
 
         switch (type) {
             case SectionType.WRONG:
@@ -36,6 +37,10 @@ const StyledSection = styled.section<{ type: SectionType }>`
                 return transparentize(opacity, theme.colors.green)
         }
     }};
+
+    @media (${({ theme }) => theme.breakpoints.medium}) {
+        width: 100%;
+    }
 `
 
 export const Section: React.FC<PropsWithChildren<{ type: SectionType }>> = ({ type, children }) => {
