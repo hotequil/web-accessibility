@@ -6,6 +6,7 @@ import routes from './routes'
 import { NotUseCapitalizedText } from './pages/NotUseCapitalizedText'
 import { ImageWithAlternativeText } from './pages/ImageWithAlternativeText'
 import { NotUseClickHere } from './pages/NotUseClickHere'
+import { LinkAsButtonAndButtonAsLink } from './pages/LinkAsButtonAndButtonAsLink'
 
 export default function App() {
     return (
@@ -16,6 +17,7 @@ export default function App() {
                     <Route path={routes.notUseCapitalizedText} element={<NotUseCapitalizedText />} />
                     <Route path={routes.imageWithAlternativeText} element={<ImageWithAlternativeText />} />
                     <Route path={routes.notUseClickHere} element={<NotUseClickHere />} />
+                    <Route path={routes.linkAsButtonAndButtonAsLink} element={<LinkAsButtonAndButtonAsLink />} />
                     <Route path="*" element={<Navigate to={routes.notUseCapitalizedText} replace />} />
                 </Routes>
             </BrowserRouter>

@@ -18,7 +18,7 @@ export default createGlobalStyle`
     }
 
     * {
-        transition-property: box-shadow, color;
+        transition-property: box-shadow, color, opacity;
         transition-duration: ${({ theme }) => theme.transitions.speed};
 
         &:focus-visible {
