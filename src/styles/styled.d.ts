@@ -25,6 +25,7 @@ declare module 'styled-components' {
             largeDarkGray: string
         }
         breakpoints: {
+            large: string
             medium: string
         }
         transitions: {

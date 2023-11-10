@@ -28,6 +28,7 @@ export default {
         largeDarkGray: `0 ${two} ${six} ${one} #afafaf`,
     },
     breakpoints: {
+        large: 'max-width: 1200px',
         medium: 'max-width: 800px',
     },
     transitions: {

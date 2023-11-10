@@ -18,6 +18,7 @@ export default createGlobalStyle`
     }
 
     * {
+        font-family: inherit;
         transition-property: box-shadow, color, opacity;
         transition-duration: ${({ theme }) => theme.transitions.speed};
 
