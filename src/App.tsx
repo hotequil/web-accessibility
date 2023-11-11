@@ -7,6 +7,7 @@ import { NotUseCapitalizedText } from './pages/NotUseCapitalizedText'
 import { ImageWithAlternativeText } from './pages/ImageWithAlternativeText'
 import { NotUseClickHere } from './pages/NotUseClickHere'
 import { LinkAsButtonAndButtonAsLink } from './pages/LinkAsButtonAndButtonAsLink'
+import { UseRadioNotButton } from './pages/UseRadioNotButton'
 
 export default function App() {
     return (
@@ -18,6 +19,7 @@ export default function App() {
                     <Route path={routes.imageWithAlternativeText} element={<ImageWithAlternativeText />} />
                     <Route path={routes.notUseClickHere} element={<NotUseClickHere />} />
                     <Route path={routes.linkAsButtonAndButtonAsLink} element={<LinkAsButtonAndButtonAsLink />} />
+                    <Route path={routes.useRadioNotButton} element={<UseRadioNotButton />} />
                     <Route path="*" element={<Navigate to={routes.notUseCapitalizedText} replace />} />
                 </Routes>
             </BrowserRouter>
