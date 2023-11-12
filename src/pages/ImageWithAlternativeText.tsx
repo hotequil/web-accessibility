@@ -39,7 +39,7 @@ export const ImageWithAlternativeText: React.FC = () => {
                     />
                     <Image
                         src={movieOJecaEAFreiraByMazzaropi}
-                        alt="The movie poster 'O Jeca e a Freira' of Mazzaropi, it shows him and his wife looking at something. He's holding a pipe and wearing a hat, and there's a semi-transparent image of a nun in the sky"
+                        alt="The movie poster 'O Jeca e a Freira' of Mazzaropi, it shows him and his wife looking ahead. He's holding a pipe and wearing a hat, and there's a semi-transparent image of a nun in the sky"
                     />
                 </Grid>
             }
