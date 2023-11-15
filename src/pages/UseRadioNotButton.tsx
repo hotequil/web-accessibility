@@ -7,6 +7,9 @@ import truckIcon from '/truck-icon.png'
 import busIcon from '/bus-icon.png'
 import bigTruckIcon from '/big-truck-icon.png'
 import { transparentize } from 'polished'
+import useRadioNotButtonFirstRight from '/code-examples/use-radio-not-button-first-right.png'
+import useRadioNotButtonFirstWrong from '/code-examples/use-radio-not-button-first-wrong.png'
+import { CodeExamples } from '../components/CodeExamples'
 
 enum DriversLicenseCategories {
     CATEGORY_A = 'category-a',
@@ -201,52 +204,74 @@ export const UseRadioNotButton: React.FC = () => {
     return (
         <Page
             wrongChildren={
-                <Fieldset>
-                    <Legend />
+                <>
+                    <Fieldset>
+                        <Legend />
 
-                    {options.map(({ title, description, value, icon }) => {
-                        const isSelected = wrongValue === value
+                        {options.map(({ title, description, value, icon }) => {
+                            const isSelected = wrongValue === value
 
-                        return (
-                            <Button key={value} onClick={() => setWrongValue(value)} isSelected={isSelected}>
-                                <OptionContent
-                                    title={title}
-                                    description={description}
-                                    icon={icon}
-                                    isSelected={isSelected}
-                                />
-                            </Button>
-                        )
-                    })}
-                </Fieldset>
+                            return (
+                                <Button key={value} onClick={() => setWrongValue(value)} isSelected={isSelected}>
+                                    <OptionContent
+                                        title={title}
+                                        description={description}
+                                        icon={icon}
+                                        isSelected={isSelected}
+                                    />
+                                </Button>
+                            )
+                        })}
+                    </Fieldset>
+
+                    <CodeExamples
+                        images={[
+                            {
+                                src: useRadioNotButtonFirstWrong,
+                                alt: 'Buttons used incorrectly to select just one',
+                            },
+                        ]}
+                    />
+                </>
             }
             rightChildren={
-                <Fieldset>
-                    <Legend />
+                <>
+                    <Fieldset>
+                        <Legend />
 
-                    {options.map(({ title, description, value, icon }) => {
-                        const isSelected = rightValue === value
+                        {options.map(({ title, description, value, icon }) => {
+                            const isSelected = rightValue === value
 
-                        return (
-                            <Label key={value} htmlFor={value} isSelected={isSelected}>
-                                <Input
-                                    type="radio"
-                                    name="driversLicenseCategory"
-                                    checked={isSelected}
-                                    id={value}
-                                    value={value}
-                                    onChange={() => setRightValue(value)}
-                                />
-                                <OptionContent
-                                    title={title}
-                                    description={description}
-                                    icon={icon}
-                                    isSelected={isSelected}
-                                />
-                            </Label>
-                        )
-                    })}
-                </Fieldset>
+                            return (
+                                <Label key={value} htmlFor={value} isSelected={isSelected}>
+                                    <Input
+                                        type="radio"
+                                        name="driversLicenseCategory"
+                                        checked={isSelected}
+                                        id={value}
+                                        value={value}
+                                        onChange={() => setRightValue(value)}
+                                    />
+                                    <OptionContent
+                                        title={title}
+                                        description={description}
+                                        icon={icon}
+                                        isSelected={isSelected}
+                                    />
+                                </Label>
+                            )
+                        })}
+                    </Fieldset>
+
+                    <CodeExamples
+                        images={[
+                            {
+                                src: useRadioNotButtonFirstRight,
+                                alt: 'Radio (input) used correctly with some options to select',
+                            },
+                        ]}
+                    />
+                </>
             }
         />
     )
