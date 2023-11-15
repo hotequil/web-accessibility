@@ -3,6 +3,9 @@ import { Page } from '../layouts/Page'
 import styled, { css } from 'styled-components'
 import { darken, transparentize } from 'polished'
 import { ExampleItem } from '../components/ExampleItem'
+import linkAsButtonAndButtonAsLinkFirstWrong from '/code-examples/link-as-button-and-button-as-link-first-wrong.png'
+import linkAsButtonAndButtonAsLinkFirstRight from '/code-examples/link-as-button-and-button-as-link-first-right.png'
+import { CodeExamples } from '../components/CodeExamples'
 
 const primaryLinkStyles = css`
     background-color: ${({ theme }) => theme.colors.black};
@@ -99,6 +102,15 @@ export const LinkAsButtonAndButtonAsLink: React.FC = () => {
                     <ExampleItem title={examples.second.title}>
                         <SmallButtonWrong onClick={openAlertPopup}>{examples.second.text}</SmallButtonWrong>
                     </ExampleItem>
+
+                    <CodeExamples
+                        images={[
+                            {
+                                src: linkAsButtonAndButtonAsLinkFirstWrong,
+                                alt: 'Wrong examples of redirection using a button instead of a link, then we have a link being used as a button',
+                            },
+                        ]}
+                    />
                 </>
             }
             rightChildren={
@@ -110,6 +122,15 @@ export const LinkAsButtonAndButtonAsLink: React.FC = () => {
                     <ExampleItem title={examples.second.title}>
                         <SmallButtonRight onClick={openAlertPopup}>{examples.second.text}</SmallButtonRight>
                     </ExampleItem>
+
+                    <CodeExamples
+                        images={[
+                            {
+                                src: linkAsButtonAndButtonAsLinkFirstRight,
+                                alt: 'Correct HTML examples using an anchor for a link and a button that opens a popup',
+                            },
+                        ]}
+                    />
                 </>
             }
         />
