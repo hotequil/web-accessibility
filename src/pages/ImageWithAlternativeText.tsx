@@ -20,6 +20,7 @@ const Grid = styled.div`
 
 const Image = styled.img`
     width: 100%;
+    height: fit-content;
     border-radius: ${({ theme }) => theme.spaces.four};
     box-shadow: ${({ theme }) => `${theme.spaces.one} ${theme.spaces.three} ${theme.spaces.six} ${theme.spaces.two}`}
         ${({ theme }) => transparentize(0.82, theme.colors.black)};
