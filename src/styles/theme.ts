@@ -20,6 +20,7 @@ export default {
         six,
         eight: '16px',
         sixteen: '32px',
+        thirtyTwo: '64px',
     },
     borders: {
         smallGray: '1px solid #d1d1d1',

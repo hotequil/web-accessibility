@@ -17,6 +17,7 @@ declare module 'styled-components' {
             six: string
             eight: string
             sixteen: string
+            thirtyTwo: string
         }
         borders: {
             smallGray: string
