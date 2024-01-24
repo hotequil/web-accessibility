@@ -23,9 +23,8 @@ export default createGlobalStyle`
         transition-duration: ${({ theme }) => theme.transitions.speed};
 
         &:focus-visible {
-            outline: transparent solid ${({ theme }) => theme.spaces.one};
-            outline-offset: ${({ theme }) => theme.spaces.one};
-            box-shadow: inset 0 0 0 ${({ theme }) => theme.spaces.two} ${({ theme }) => theme.colors.blue};
+            outline: ${({ theme }) => theme.spaces.two} solid ${({ theme }) => theme.colors.blue};
+            outline-offset: ${({ theme }) => `-${theme.spaces.two}`};
         }
     }
 
